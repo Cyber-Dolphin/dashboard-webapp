@@ -8,7 +8,7 @@ var jwt = require('jsonwebtoken');
 var Q = require('Q');
 const Speakeasy = require("speakeasy");
 var formidable = require('formidable');
-var User = require('../models/user');
+var User = require('../models/User');
 var path = require('path');
 var async = require('async');
 router.post('/changeprofile', function(req, res) {
