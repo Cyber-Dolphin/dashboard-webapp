@@ -1,7 +1,7 @@
 const env = {
   database: 'samm',
-  username: 'root',
-  password: 'root',
+  username: 'samm_user',
+  password: 'samm_user_Passw0rd!',
   host: 'localhost',
   dialect: 'mysql',
   pool: {
