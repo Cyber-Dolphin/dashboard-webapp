@@ -29,6 +29,7 @@
     "path": "^0.12.7",
     "public-ip": "^4.0.0",
     "sequelize": "^5.21.2",
-    "speakeasy": "^2.0.0"
+    "speakeasy": "^2.0.0",
+    "q": "^1.5.1"
   }
 }
