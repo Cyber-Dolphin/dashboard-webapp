@@ -96,6 +96,7 @@ No DHCP "VirtualBox Host-Only Ethernet Adapter", ip: 192.168.56.1/24, example:
 How use:
 
 git clone https://github.com/Cyber-Dolphin/dashboard-webapp.git
+
 cd dashboard-webapp && vagrant up
 
 Open web browser http://192.168.56.50:3000
