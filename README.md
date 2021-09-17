@@ -79,6 +79,27 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     
 3) Mysql (Xampp Server): https://www.apachefriends.org/download.html or MYSQL Server 
 
+## Run in vagrant
+
+# For testing only!!!
+
+Requariments:
+
+Vagrant 2.2.18
+
+Virtua Box 6.0.24
+
+No DHCP "VirtualBox Host-Only Ethernet Adapter", ip: 192.168.56.1/24, example:
+
+![image](https://user-images.githubusercontent.com/16451776/133780515-9143c08f-1b1e-44e3-9587-517e9b28ba80.png)
+
+How use:
+
+git clone https://github.com/Cyber-Dolphin/dashboard-webapp.git
+cd dashboard-webapp && vagrant up
+
+Open web browser http://192.168.56.50:3000
+
 ## Installation Instructions 
 
 1) Open XAMPP Control panel and open phpmyadmin
@@ -99,15 +120,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     #### For Mysql 
     Open command propmt in the parent directory and run `mysql` (Mysql should be added to the path of environment variables). Execute the following queries to import the `.sql` file,  
     `create database samm;`  
-    `use samm;`  
+    `use samm;`
+    `create user 'samm_user'@'localhost' identified by 'samm_user_Passw0rd!';`
+    `grant all privileges on * . * to 'samm_user'@'localhost';`
+    `flush privileges;`
     `mysql -u username –-password=your_password database_name < Path/to/samm.sql`
+4) Navigate to dashboard-webapp `sudo npm install` 
 4) Navigate to `/server` directory and open command prompt and run the command:  
-     `npm install nodemon`  
-      Aftet installation, run the command:`npm start`(Do not close this terminal)
+     `npm install`
+     `sudo npm install q`
+     `mv node_modules/q node_modules/Q`
+      Aftet installation, run the command:`npm start &`
 5) Navigate to `/server2` directory and open command prompt and run the command:  
-    `npm install nodemon`   
-    Aftet installation, run the command:`npm start`(Do not close this terminal)
-6) To run the angular app, go to the parent directory `/SAMM` and run `ng serve` in cmd. (Do not close this terminal)
+    `sudo npm install`   
+    Aftet installation, run the command:`npm start &`
+6) To run the angular app, go to the parent directory `dashboard-webapp` and run `ng serve` in cmd. (Do not close this terminal)
 7) Open browser and navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
     
 ## Default User Credentials
